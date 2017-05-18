@@ -1,10 +1,13 @@
-peerprobe_exporter功能描述
+peerprobe_exporter功能描述与使用说明
+
 go-peerprobe-exporter镜像实现了两个功能：一方面实现了间隔10s对目录/etc/hostsmap文件中定义的主机ip+端口进行连通性检测，并记录是否连通以及访问时延信息，信息保存超过5分钟会自动老化删除；另一方面实现了将检测结果进行汇总统计，可以通过node_peerconnect_success_rate（连通率，取值0~1）和node_peerconnect_timedelay_average（时延平均值，单位：ms，如果不通取值为-1）两个metric访问，以便prometheus监控系统进行结果查询以及后续处理。
 
 镜像获取
+
 docker pull shangaoshuichang2017/go-peerprobe-exporter
 
 镜像启动
+
 docker run -d --volume=/etc:/etc --env NODE_EXPORTER_LISTEN_PORT=8000 --net="host" --name go-netprobe shangaoshuichang2017/go-peerprobe-exporter:1.0
 
 注意：
