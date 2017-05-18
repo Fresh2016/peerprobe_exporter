@@ -1,12 +1,8 @@
-App Configuration:
-               
+App Configuration: 
 ############################################################################
 CheckInterval(default:10s):   15     RecordObsoleteTime(default:5minutes):   6     DialWaitTime(default:3s):   5  (The discription and the value must be seperated by spacebar or tab key)
 ############################################################################
 	           	     
- 	        
-	          	     				      	
-
 IP                     TYPE            PORT
 127.0.0.1		tcp		22
 127.0.0.1		tcp		8058
